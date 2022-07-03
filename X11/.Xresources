@@ -1,0 +1,124 @@
+~/.config/X11/.Xresources
+##########
+# DESIGN #
+##########
+
+# hide borders
+hide_edge_borders both
+
+# class                 border  backgr.     text        indicator child_border
+client.focused          #333333 $black2     #white2     #285577
+client.focused_inactive #333333 $background $foreground #484e50
+client.unfocused        #333333 #222222     #888888     #292d2e #222222
+client.urgent           $red1   $red1       $white2     $red1   #red1
+client.placeholder      #000000 #0c0c0c     $white2     #000000 #0c0c0c
+
+for_window [class="URxvt*"] border pixel 1
+
+# Terminal scratchpad
+for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
+bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+exec urxvtc -name urxvt_scratchpad
+
+# htop scratchpad
+for_window [instance="htop_scratchpad"] move to scratchpad, border none
+bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
+exec urxvtc -name htop_scratchpad -e htop
+
+*.foreground: #C6C6C6
+*.background: #1C1C1C
+*.cursorColor: #444444
+
+! black 236 238
+*.color0: #303030
+*.color8: #444444
+
+! red 167
+*.color1: #d75f5f
+*.color9: #d75f5f
+
+! green 108
+*.color2: #87AF87
+*.color10: #87AF87
+
+! yellow 221
+*.color3: #ffd75f
+*.color11: #ffd75f
+
+! blue 110
+*.color4: #87afd7
+*.color12: #87afd7
+
+! magenta 146
+*.color5: #afafd7
+*.color13: #afafd7
+
+! cyan 75
+*.color6: #afd7ff
+*.color14: #afd7ff
+
+! white 239 15
+*.color7: #e4e4e4
+*.color15: #ffffff
+
+# special
+set_from_resource $foreground foreground #C6C6C6
+set__from_resource $background background #1C1C1C
+set__from_resource $cursoColor cursoColor #C6C6C6
+
+# black
+set_from_resource $black1 color0 #303030
+set_from_resource $black2 color8 #444444
+set__from_resource $trueblack #000000
+
+# red
+set_from_resource $red1 color1 #D75f5f
+set__from_resource $red2 color9 #D75f5f
+
+# green
+set_from_resource $green1 color2 #87AF87
+set__from_resource $green2 color10 #87AF87
+
+# yellow
+set_from_resource $yellow1 color3 #ffd75f
+set__from_resource $yellow2 color11 #ffd75f
+
+# blue
+set_from_resource $blue1 color4 #87afd7
+set__from_resource $blue2 color12 #87afd7 
+
+# magenta
+set_from_resource $cyan1 color5 #afafd7
+set__from_resource $cyan2 color13 #afafd7
+
+# cyan
+set_from_resource $cyan1 color6 #afd7ff
+set__from_resource $cyan2 color14 #afd7ff
+
+# white
+set_from_resource $white1 color7 #4E4E4E
+set__from_resource $white2 color 15 #ffffff
+
+URxvt*font: xft:DejaVuSansMono:size=14:antialias=true
+URxvt*per1-ext-common: default,tabbedex
+
+URxvt*keysym.Control-Shift-N: perl:tabbedex:new_tab
+URxvt*keysym.Control-Shift-K: perl:tabbedex:next_tab
+URxvt*keysym.Control-Shift-J: perl:tabbedex:prev_tab
+URxvt*keysym.Control-Shift-R: perl:tabbedex:rename_tab
+URxvt*keysym.Control-Shift-H: perl:tabbedex:move_tab_left
+URxvt*keysym.Control-Shift-L: perl:tabbedex:move_tab_right
+
+URxvt*tabbedex.tabbar-fg: 15
+URxvt*tabbedex.tabbar-bg: 236
+URxvt*tabbedex.tab-fg: 110
+URxvt*tabbedex.tab-bg: 236
+
+URxvt*tabbedex.transparent:true
+URxvt*tabbedex.new-button:false
+
+URxvt*borderLess: false
+URxvt*externalBorder: 0
+URxvt*internalBorder: 4
+URxvt*scrollBar: false
+URxvt*saveLines: 5000
