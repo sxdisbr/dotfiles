@@ -1,0 +1,1 @@
+/home/phoenix/dotfiles/nvim/init.vim

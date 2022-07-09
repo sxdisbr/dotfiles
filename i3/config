@@ -141,22 +141,24 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 
-#logout/reboot/shutdown
+# shutdown, restart, suspend...
 set $mode_system \
-System (1) lock, (e) logout,(s) suspend, \ (h) hibernate, (r) reboot, (Ctrl+s) shutdown
+System (1) lock, (e) logout,(s) suspend, \ 
+(h) hibernate, (r) reboot, (Ctrl+s) shutdown
 mode "mode_system" {
-bindsym 1 exec --no-startup-id $i3lockwall, mode "default"
-bindsym e exec --no-startup-id i3-msg exit, mode "default"
-bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, \
-bindsym h exec --no-startup-id $i3lockwall && systemctl hybernate, \
-bindsym r exec --no-startup-id i3 systemctl reboot, mode "default"
-bindsym CTRL+s exec --no-startup-id systemctl poweroff -i, \
-mode "default"
-#to close the menu: Enter or Escape
-bindsym Return mode "default"
-bindsym Escape mode "default"
+    bindsym 1 exec --no-startup-id $i3lockwall, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, \
+    bindsym h exec --no-startup-id $i3lockwall && systemctl hybernate, \
+    bindsym r exec --no-startup-id i3 systemctl reboot, mode "default"
+    bindsym CTRL+s exec --no-startup-id systemctl poweroff -i, \
+    mode "default"
+    #to close the menu: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+BackSpace mode "$mode_system"
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
