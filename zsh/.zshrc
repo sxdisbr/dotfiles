@@ -1,6 +1,6 @@
 fpath=($ZDOTDIR/external $fpath)
 
-source "$XDG_CONFIG_HOME/zsh/aliases"
+source ~/dotfiles/zsh/aliases
 
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
@@ -24,7 +24,7 @@ setopt PUSHD_SILENT
 bindkey -v
 export KEYTIMEOUT=1
 
-autoload -Uz cursor_mode && cursor_mode
+# autoload -Uz cursor_mode && cursor_mode
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
@@ -45,4 +45,3 @@ fi
 source $DOTFILES/zsh/scripts.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-

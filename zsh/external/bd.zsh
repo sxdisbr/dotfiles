@@ -1,35 +1,3 @@
-source "$XDG_CONFIG_HOME/zsh/aliases"
-  2 
-  3 source "$XDG_CONFIG_HOME/zsh/aliases"
-  4 
-  5 zmodload zsh/complist
-  6 bindkey -M menuselect 'h' vi-backward-char
-  7 bindkey -M menuselect 'k' vi-up-line-or-history
-  8 bindkey -M menuselect 'l' vi-forward-char
-  9 bindkey -M menuselect 'j' vi-down-line-or-history
- 10 
- 11 autoload -Uz compinit; compinit
- 12 _comp_options+=(globdots) # With hidden files
- 13 source ~/dotfiles/zsh/external/completion.zsh
- 14 
- 15 autoload -Uz prompt_purification_setup; prompt_purification_setup
- 16 
- 17 # Push the current directory visited on to the stack.
- 18 setopt AUTO_PUSHD
- 19 # Do not store duplicate directories in the stack
-  1 fpath=($ZDOTDIR/external $fpath)
-reincarnation% nvim ~/dotfiles/zsh/.zshrc
-reincarnation% nvim ~/dotfiles/zsh/.zshrc
-reincarnation% ls
-aliases  external  scripts.sh
-reincarnation% ls -a
-.  ..  .zshenv	.zshrc	aliases  external  scripts.sh
-reincarnation% cd external
-reincarnation% ls
-bd.zsh	completion.zsh	cursor_mode  prompt_purification_setup
-reincarnation% ls -a
-.  ..  bd.zsh  completion.zsh  cursor_mode  prompt_purification_setup
-reincarnation% cat bd.zsh
 # Source: https://raw.githubusercontent.com/Tarrasch/zsh-bd/master/bd.zsh
 
 bd () {
