@@ -45,3 +45,6 @@ fi
 source $DOTFILES/zsh/scripts.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Created by `pipx` on 2025-02-26 11:28:23
+export PATH="$PATH:/home/lazarus/.local/bin"

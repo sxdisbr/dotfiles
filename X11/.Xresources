@@ -24,14 +24,16 @@
 *.color14: #afd7ff
 ! white 239 15
 *.color7: #e4e4e4
-URxvt*font: xft:Roboto:pixelsize=20
-URxvt*letterSpace: 0
+URxvt*font: xft:/home/lazarus/dotfiles/fonts/DejaVuSansMono.otf:size=18
+URxvt*letterSpace: -1 
 URxvt*lineSpace: 0
 URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 4
 URxvt*scrollBar: false
 URxvt*saveLines: 5000
+URxvt*depth: 32
+URxvt.background: [100]#181815
 *.color15: #ffffff
 URxvt*perl-ext-common: default,tabbedex
 URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab

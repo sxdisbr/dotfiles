@@ -1,0 +1,114 @@
+# General system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*.un~
+*.undo
+*.tmp
+*.bak
+*.rej
+*.orig
+*~
+
+# Neovim
+.nvim/
+.local/share/nvim/
+.session
+
+# Vim
+.viminfo
+.vimrc.local
+.vimrc.bundles.local
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Zsh
+.zcompdump
+.zsh_history
+
+# Bash
+.bash_history
+.bash_logout
+
+# SSH
+.ssh/known_hosts
+.ssh/config.local
+
+# GPG
+.gnupg/
+*.gpg
+*.asc
+
+# Git
+.gitconfig.local
+.gitignore_global
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Arch Linux specific
+.pacman/
+.pacdiff
+*.pacsave
+*.pacnew
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+.dockerignore
+Dockerfile
+docker-compose.*.yml
+
+# Local development
+.local/
+.cache/
+
+# Other
+*.log
+*.pot
+*.sqlite3
+*.sql
+*.db
